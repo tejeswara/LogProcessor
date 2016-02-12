@@ -13,12 +13,16 @@ public class LogItem {
 	@ObjectId
 	@JsonProperty("_id")
 	String id;
+	@JsonProperty("field_test_unique_id")
+	String testUniqueId;
 	@JsonProperty("field_test_result")
 	String testResult;
 	@JsonProperty("field_test_error")
 	String testError;
-	@JsonProperty("field_test_dir")
+	@JsonProperty("field_test_directory")
 	String testDirectory;
+	@JsonProperty("field_test_directory_date")
+	String testDirectoryDate;
 	@JsonProperty("field_test_project")
 	String testProject;
 	@JsonProperty("field_test_module")
@@ -28,7 +32,7 @@ public class LogItem {
 	@JsonProperty("field_test_sim_time")
 	Long testSimulationTime;
 	@JsonProperty("field_test_time_completed")
-	Date timeSimulationCompleted;
+	String timeSimulationCompleted;
 	@JsonProperty("field_test_name")
 	String testName;
 	@JsonProperty("field_test_seed")
@@ -41,6 +45,12 @@ public class LogItem {
 	}
 	public void setId(String id) {
 		this.id = id;
+	}
+	public String getTestUniqueId() {
+		return testUniqueId;
+	}
+	public void setTestUniqueId(String uniqueId) {
+		this.testUniqueId = uniqueId;
 	}
 	public String getTestResult() {
 		return testResult;
@@ -59,6 +69,12 @@ public class LogItem {
 	}
 	public void setTestDirectory(String testDirectory) {
 		this.testDirectory = testDirectory;
+	}
+	public String getTestDirectoryDate() {
+		return testDirectoryDate;
+	}
+	public void setTestDirectoryDate(String testDirectoryDate) {
+		this.testDirectoryDate = testDirectoryDate;
 	}
 	public String getTestProject() {
 		return testProject;
@@ -84,10 +100,10 @@ public class LogItem {
 	public void setTestSimulationTime(Long testSimulationTime) {
 		this.testSimulationTime = testSimulationTime;
 	}
-	public Date getTimeSimulationCompleted() {
+	public String getTimeSimulationCompleted() {
 		return timeSimulationCompleted;
 	}
-	public void setTimeSimulationCompleted(Date timeSimulationCompleted) {
+	public void setTimeSimulationCompleted(String timeSimulationCompleted) {
 		this.timeSimulationCompleted = timeSimulationCompleted;
 	}
 	public String getTestName() {
